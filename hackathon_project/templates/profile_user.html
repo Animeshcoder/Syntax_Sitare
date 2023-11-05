@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ user.name }} - Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-RKcX9b2Fkhi2nfvPH0qVZNDpBBUL3Pp2GS6p7ZbhU56JFd8aPES/jPxYjTq4dqwi" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin: 50px auto;
+            padding: 20px;
+            max-width: 1200px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile {
+            width: 40%;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #2ecc71;
+        }
+
+        .profile h1 {
+            color: #333;
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .profile p {
+            color: #666;
+            font-size: 18px;
+            margin: 5px 0;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 200px;
+        }
+
+        .social-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        .linkedin {
+            background-color: #0077b5;
+        }
+
+        .github {
+            background-color: #333;
+        }
+
+        .details {
+            width: 60%;
+            padding: 20px;
+        }
+
+        .details h2 {
+            color: #2ecc71;
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        .details p {
+            color: #333;
+            font-size: 18px;
+            margin: 5px 0;
+        }
+
+        .progress-container {
+            width: 100%;
+            height: 20px;
+            background: #f3f3f3;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .progress-bar {
+            height: 100%;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 20px;
+            color: white;
+        }
+
+        .tasks-done {
+            background: #2ecc71;
+        }
+
+        .projects-done {
+            background: #333;
+        }
+
+        .tests-done {
+            background: #ac2bac;
+        }        #navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        #navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        #navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('projects') }}">Projects</a>
+        <a href="{{ url_for('tasks') }}">Tasks</a>
+        <a href="{{ url_for('test') }}">Tests</a>
+        <a href="#">Matched Companies</a>
+    </div>
+    <div class="container">
+        <div class="profile">
+            <img src="{{ url_for('static', filename='icon-user-15.jpg') }}" alt="contact" style="height: 150px ; width: 150px;">
+            <h1>{{ user.name }}</h1>
+            <p>Email: {{ user.email }}</p>
+            <p>Phone Number: {{ user.phone_number }}</p>
+
+            <!-- Social Media Links -->
+            <div class="social-links">
+                <a href="{{ user.linkedin_id }}" class="linkedin">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="{{ user.github_id }}" class="github">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+        </div>
+        <div class="details">
+            <h2>University Name</h2>
+            <p>{{ user.university_name }}</p>
+            <h2>CGPA</h2>
+            <p>{{ user.cgpa }}</p>
+            <h2>Expected Year to Complete Degree</h2>
+            <p>{{ user.expected_year_to_complete_degree }}</p>
+            <h2>Projects Done</h2>
+            <p>{{ user.projects_done }}</p>
+            <h2>Links for Certificates</h2>
+            <p>{{ user.links_for_certificates }}</p>
+            <h2>Skills</h2>
+            <p>{{ user.skills }}</p>
+            <h2>Field of Interest</h2>
+            <p>{{ user.field_of_interest }}</p>
+            <h2>Progress</h2>
+            <div class="progress-container">
+                <div class="progress-bar tasks-done" style="width: {{ user.task_per }}%;">Task Done: {{ user.task_per }}%</div>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar projects-done" style="width: {{ user.project_per }}%;">Project Done: {{ user.project_per }}%</div>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar tests-done" style="width: {{ user.test_per }}%;">Test Done:  {{ user.test_per }}%</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

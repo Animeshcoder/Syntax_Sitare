@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+    <style>
+        * {
+            box-sizing: border-box;
+          }
+          
+          input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+          }
+          
+          input[type=submit] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+          }
+          
+          input[type=submit]:hover {
+            background-color: #45a049;
+          }
+          
+          .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 10px;
+          }
+          
+          .column {
+            float: left;
+            width: 50%;
+            margin-top: 6px;
+            padding: 20px;
+          }
+          
+          .row:after {
+            content: "";
+            display: table;
+            clear: both;
+          }
+          
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div style="text-align:center">
+          <h2>Contact Us</h2>
+          <p>Swing by for a cup of coffee, or leave us a message:</p>
+        </div>
+        <div class="row">
+          <div class="column">
+            <img src="{{ url_for('static', filename='contact.jpg') }}" alt="contact" style="width: 96%;">
+
+          </div>
+          <div class="column">
+            <form>
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name..">
+              <label for="email">Email</label>
+              <input type="text" id="email" name="email" placeholder="Your Email..">
+              <label for="country">Country</label>
+              <select id="country" name="country">
+                <option value="india">India</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+                <option value="germany">Germany</option>
+                <option value="spain">Spain</option>
+                <option value="france">France</option>
+                <option value="australia">Australia</option>
+              </select>
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

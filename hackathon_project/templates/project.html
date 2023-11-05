@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #63c463;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.category-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.category-card h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.project-title {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #333;
+    transition: color 0.2s;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.project-title:hover {
+    color: #62be62;
+}
+
+.project-details {
+    display: none;
+}
+
+.project-details p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+ul {
+    margin-top: 0;
+    padding-left: 20px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin: 10px auto;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Projects</h1>
+    </header>
+    <div class="container">
+        <div class="category-card" id="frontend-card">
+            <h2>Frontend Development</h2>
+            <h3 class="project-title">Project: Video Player Web App</h3>
+            <div class="project-details">
+                <p>Skills Required: HTML, CSS, JavaScript</p>
+                <p>Difficulty Level: Hard</p>
+                <p>In this frontend project, you'll build a full-fledged video player web app using HTML5 Video API. The web application should have a user-friendly interface with features such as play/pause, skip, and volume controls. This project is perfect if you want to level up your front-end development skills by building something exciting and challenging.</p>
+                <h3>Project Requirements:</h3>
+                <ul>
+                    <li>The web application should have a video player that can play, pause, and stop video playback.</li>
+                    <li>Users should be able to navigate through the video by dragging the progress bar.</li>
+                </ul>
+            </div>
+            <h3 class="project-title">Project: Pricing Card Page</h3>
+            <div class="project-details">
+                <p>Skills Required: HTML, CSS & JavaScript</p>
+                <p>Difficulty Level: Beginner</p>
+                <p>In this frontend project, you will create a pricing card page that displays different pricing plans for a product or service. This project is perfect for you if you're interested in building interactive front-end web components and taking your front-end skills to the next level!</p>
+                <h3>Project Requirements:</h3>
+                <ul>
+                    <li>The page should contain three pricing cards, each with a different pricing plan and a list of features.</li>
+                    <li>Display both monthly and annual pricing to users.</li>
+                    <li>Users should have the option to switch between monthly and annual pricing by clicking on the Toggle button.</li>
+                    <li>Show the hover state of all the elements.</li>
+                    <li>Make this landing page look as close to the design as possible.</li>
+                    <li>The component should be responsive and display correctly on different screen sizes.</li>
+                </ul>
+            </div>
+            <h3 class="project-title">Project: Blog Card Component</h3>
+            <div class="project-details">
+                <p>Skills Required: HTML, CSS & JavaScript</p>
+                <p>Difficulty Level: Intermediate</p>
+                <p>This project involves creating a reusable blog card component for displaying articles on your website. It's a great way to enhance your web development skills and make your content more visually appealing.</p>
+                <h3>Project Requirements:</h3>
+                <ul>
+                    <li>Create a blog card with an image, title, and excerpt of the article.</li>
+                    <li>Make the card responsive and visually appealing.</li>
+                    <li>Add hover effects for user interaction.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="category-card" id="backend-card">
+            <h2>Backend Development</h2>
+            <h3 class="project-title">Project: Build Your Own Web Server</h3>
+            <div class="project-details">
+                <p>Skills Required: Node.js, HTTP, Networking</p>
+                <p>Difficulty Level: Advanced</p>
+                <p>In this backend project, you'll build your own web server using Node.js. This is a challenging project that will deepen your understanding of web development and server-side programming.</p>
+                <h3>Project Requirements:</h3>
+                <ul>
+                    <li>Create a web server that can handle HTTP requests.</li>
+                    <li>Implement routing and serve web pages.</li>
+                    <li>Handle different HTTP methods (GET, POST, etc.).</li>
+                </ul>
+            </div>
+            <h3 class="project-title">Project: Build a Finance Application</h3>
+            <div class="project-details">
+                <p>Skills Required: Python, Financial APIs</p>
+                <p>Difficulty Level: Intermediate</p>
+                <p>In this backend project, you'll build a finance application that can retrieve financial data using APIs. This is a great project to improve your Python skills and explore financial data analysis.</p>
+                <h3>Project Requirements:</h3>
+                <ul>
+                    <li>Integrate with a financial data API (e.g., Alpha Vantage).</li>
+                    <li>Retrieve and display financial data (e.g., stock prices, market indices).</li>
+                </ul>
+            </div>
+            <h3 class="project-title">Project: Create a Proxy Server</h3>
+            <div class="project-details">
+                <p>Skills Required: Node.js, Networking</p>
+                <p>Difficulty Level: Intermediate</p>
+                <p>In this project, you'll create a simple proxy server using Node.js. It's a great way to learn about server-side programming, routing, and handling HTTP requests.</p>
+                <h3>Project Requirements:</h3>
+                <ul>
+                    <li>Create a proxy server that forwards incoming requests to a target server.</li>
+                    <li>Handle different types of HTTP requests (GET, POST, etc.).</li>
+                </ul>
+            </div>
+            <h3 class="project-title">Project: Build a CLI App</h3>
+            <div class="project-details">
+                <p>Skills Required: Node.js, Command Line</p>
+                <p>Difficulty Level: Beginner</p>
+                <p>In this project, you'll build a command-line interface (CLI) application using Node.js. CLI apps are useful for various purposes, and this project will introduce you to building interactive command-line tools.</p>
+                <h3>Project Requirements:</h3>
+                <ul>
+                    <li>Create a CLI app that can perform specific tasks or provide information.</li>
+                    <li>Implement user-friendly command-line interactions.</li>
+                </ul>
+            </div>
+            <h3 class="project-title">Project: Build an API</h3>
+            <div class="project-details">
+                <p>Skills Required: Node.js, Express.js</p>
+                <p>Difficulty Level: Intermediate</p>
+                <p>In this project, you'll build a RESTful API using Node.js and Express.js. Building APIs is a fundamental skill for backend developers, and this project will give you hands-on experience in designing and implementing APIs.</p>
+                <h3>Project Requirements:</h3>
+                <ul>
+                    <li>Create a RESTful API with endpoints for specific functions (e.g., CRUD operations).</li>
+                    <li>Implement proper request handling and response formatting.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="category-card" id="ai-ml-card">
+            <h2>AI / Machine Learning</h2>
+            <h3 class="project-title">Project: T-rex Dino Bot</h3>
+            <div class="project-details">
+                <p>Skills Required: Python, Reinforcement Learning</p>
+                <p>Difficulty Level: Intermediate</p>
+                <p>This project involves building a bot to play the T-rex Dino game in Google Chrome. You'll use reinforcement learning techniques to train the bot to achieve high scores. It's a fun and educational project for AI and machine learning enthusiasts.</p>
+                <h3>Project Requirements:</h3>
+                <ul>
+                    <li>Implement a bot that can control the T-rex in the game.</li>
+                    <li>Use reinforcement learning to train the bot to jump over obstacles and achieve high scores.</li>
+                </ul>
+            </div>
+            <h3 class="project-title">Project: Next Word Predictor</h3>
+            <div class="project-details">
+                <p>Skills Required: Python, Natural Language Processing</p>
+                <p>Difficulty Level: Intermediate</p>
+                <p>In this project, you'll create a next word predictor using natural language processing techniques. The predictor can suggest the most likely next word based on the input text. It's a valuable project for understanding language modeling and prediction.</p>
+                <h3>Project Requirements:</h3>
+                <ul>
+                    <li>Train a language model on a large text corpus.</li>
+                    <li>Implement an algorithm to predict the next word given a sequence of words.</li>
+                </ul>
+            </div>
+            <h3 class="project-title">Project: Chatbot using AIML</h3>
+            <div class="project-details">
+                <p>Skills Required: Python, AIML</p>
+                <p>Difficulty Level: Beginner</p>
+                <p>In this project, you'll build a chatbot using AIML (Artificial Intelligence Markup Language). AIML is a scripting language for creating chatbots, and this project is an excellent starting point for beginners in AI and chatbot development.</p>
+                <h3>Project Requirements:</h3>
+                <ul>
+                    <li>Create AIML scripts for various chatbot interactions and responses.</li>
+                    <li>Implement a chatbot interface to communicate with users.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        const projectTitles = document.querySelectorAll(".project-title");
+
+        projectTitles.forEach((title) => {
+            title.addEventListener("click", () => {
+                const projectDetail = title.nextElementSibling;
+                projectDetail.style.display = (projectDetail.style.display === "block") ? "none" : "block";
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register as User</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 100px;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .form-box {
+            width: 90%; /* Adjust the width as needed */
+            max-width: 800px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            text-decoration: underline;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        input[type="file"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            outline: none;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .form-row > div {
+            width: 48%;
+        }
+
+        .internship-details {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-box">
+            <form method="post">
+                <h1>Registration</h1>
+                <div class="form-row">
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div>
+                        <label for="university_name">University Name:</label>
+                        <input type="text" id="university_name" name="university_name" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div>
+                        <label for="cgpa">CGPA:</label>
+                        <input type="text" id="cgpa" name="cgpa" required>
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="email" required>
+                    </div>
+                </div>
+                <div class "form-row">
+                    <div>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div>
+                        <label for="confirm_password">Re-enter Password:</label>
+                        <input type="password" id="confirm_password" name="confirm_password" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div>
+                        <label for="phone_number">Phone Number:</label>
+                        <input type="text" id="phone_number" name="phone_number" required>
+                    </div>
+                    <div>
+                        <label for="expected_year_to_complete_degree">Expected Year to complete Degree:</label>
+                        <input type="text" id="expected_year_to_complete_degree" name="expected_year_to_complete_degree" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div>
+                        <label for="projects_done">Projects Done:</label>
+                        <textarea id="projects_done" name="projects_done"></textarea>
+                    </div>
+                    <div>
+                        <label for="links_for_certificates">Links for Certificates:</label>
+                        <textarea id="links_for_certificates" name="links_for_certificates"></textarea>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div>
+                        <label for="skills">Skills:</label>
+                        <input type="text" id="skills" name="skills" required>
+                    </div>
+                    <div>
+                        <label for="field_of_interest">Field of Interest:</label>
+                        <textarea id="field_of_interest" name="field_of_interest"></textarea>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div>
+                        <label for="linkedin_id">LinkedIN ID:</label>
+                        <input type="text" id="linkedin_id" name="linkedin_id">
+                    </div>
+                    <div>
+                        <label for="github_id">Github ID:</label>
+                        <input type="text" id="github_id" name="github_id">
+                    </div>
+                </div>
+                <label for="internship_done">Have you done an internship before?</label>
+                <select id="internship_done" name="internship_done" onchange="showInternshipDetails(this)" required>
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
+                <div id="internship_details" class="internship-details">
+                    <div class="form-row">
+                        <div>
+                            <label for="company_name">Company Name:</label>
+                            <input type="text" id="company_name" name="company_name">
+                        </div>
+                        <div>
+                            <label for="duration">Duration:</label>
+                            <input type="text" id="duration" name="duration">
+                        </div>
+                    </div>
+                    <label for="work_experience">Work Experience:</label>
+                    <textarea id="work_experience" name="work_experience"></textarea>
+                </div>
+                <label for="resume">Upload Resume:</label>
+                <input type="file" id="resume" name="resume">
+                <input type="submit" value="Register">
+            </form>
+        </div>
+    </div>
+    <script>
+        function showInternshipDetails(select) {
+            var details = document.getElementById('internship_details');
+            if (select.value == 'yes') {
+                details.style.display = 'block';
+            } else {
+                details.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

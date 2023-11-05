@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Percentage Matching of Interns with Companies</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+
+    h1 {
+        text-align: center;
+        padding: 20px;
+        color: #389738; /* Green color */
+    }
+
+    p {
+        width: 80%;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        font-size: 18px;
+        line-height: 1.6;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    p::before {
+        content: "👤 ";
+        font-size: 24px;
+        margin-right: 10px;
+    }
+</style>
+
+<body>
+    
+    <h1>Matched Intern Profiles as per the Requirements of {{ company_name}}</h1>
+    {% for student_name, percentage, match, overall, all_type in matched_companies[company_name] %}
+    <p>Student Name: {{ student_name }}, Matching Percentage: {{ percentage }}%({{ match }}),OverAllFeature Match: {{ overall }} ({{ all_type }})</p>
+    {% endfor %}
+    <marquee behavior="scroll" direction="right">OverAll Recommendation of profile: we use CGPA, skills, college_nirf, project, test, task as parameters and only 50% or above profile will show.</marquee>
+
+</body>
+</html>

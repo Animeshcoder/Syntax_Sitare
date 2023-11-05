@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ company.company }} - Company Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        #navbar {
+            overflow: hidden;
+            background-color: #2ecc71; /* Dark background for the navbar */
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        #navbar a {
+            float: left;
+            display: block;
+            color: #fff; /* White text for links */
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        #navbar a:hover {
+            background-color: #359e72; /* Darker background on hover */
+        }
+
+        #profile {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        #profile h1 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        #profile p {
+            font-size: 18px;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        #profile:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('intern', company_name=company.company) }}">Interns</a>
+        <a href="{{ url_for('contacts') }}">Contact Us</a>
+    </div>
+    <div id="profile">
+        <h1>{{ company.company }}</h1>
+        <p>Work Condition: {{ company.work_condition }}</p>
+        <p>Location: {{ company.location }}</p>
+        <p>Duration: {{ company.duration }}</p>
+        <p>Stipend Per Month: {{ company.stipend_per_month }}</p>
+        <p>Last Date to By: {{ company.apply_by }}</p>
+        <p>Applicants: {{ company.applicants }}</p>
+        <p>Skills Required: {{ company.skills_required }}</p>
+        <p>Perks: {{ company.perks }}</p>
+        <p>Number of Openings: {{ company.number_of_openings }}</p>
+        <p>Email: {{ company.email }}</p>
+        <p>Phone Number: {{ company.phone_number }}</p>
+        <p>Category: {{ company.category }}</p>
+        <p>Projects for Work: {{ company.projects_for_work }}</p>
+        <p>About Company: {{ company.about_company }}</p>
+        
+    </div>
+</body>
+</html>

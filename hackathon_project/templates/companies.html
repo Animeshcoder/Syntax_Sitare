@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .company {
+            width: 60%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+            box-shadow: 0px 0px 8px #888888;
+            transition: transform .2s, background-color .2s;
+        }
+        .company:hover {
+            transform: scale(1.02);
+        }
+        .company:nth-child(odd):hover {
+            background-color: #d9d7d2;  /* Change this to the color you want for odd companies */
+        }
+        .company:nth-child(even):hover {
+            background-color: #cbcbd0;  /* Change this to the color you want for even companies */
+        }
+        .company h2 {
+            text-align: center;
+            color: #333;
+            font-size: 24px;
+        }
+        .company p {
+            margin-bottom: 10px;
+            color: #666;
+            line-height: 1.6;
+        }
+        .company .about {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    {% for company in companies %}
+    <div class="company">
+        <h2>{{ company.company }}</h2>
+        <p class="about">About: {{ company.about_company }}</p>
+        <p>Location: {{ company.location }}</p>
+        <p>Email: {{ company.email }}</p>
+    </div>
+    {% endfor %}
+</body>
+</html>

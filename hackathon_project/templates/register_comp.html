@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register as Provider</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 100px;
+            padding: 5px;
+            background: linear-gradient(to bottom, #f4f4f4, #e0e0e0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .form-box {
+            width: 60%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .form-box form {
+            margin: 0;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="password"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-row > div {
+            width: 48%;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-box">
+        <h1 style="text-align: center; font-size: 24px; text-decoration: underline;"> Registration </h1>
+        <form method="post">
+            <div class="form-row">
+                <div>
+                    <label for="company">Company:</label>
+                    <input type="text" id="company" name="company">
+                </div>
+                <div>
+                    <label for="work_condition">Work Condition:</label>
+                    <input type="text" id="work_condition" name="work_condition">
+                </div>
+            </div>
+            <div class="form-row">
+                <div>
+                    <label for="phone_number">Phone No:</label>
+                    <input type="text" id="phone_number" name="phone_number">
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email">
+                </div>
+            </div>
+            <div class="form-row">
+                <div>
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location">
+                </div>
+                <div>
+                    <label for="duration">Duration:</label>
+                    <input type="text" id="duration" name="duration">
+                </div>
+            </div>
+            <div class="form-row">
+                <div>
+                    <label for="stipend_per_month">Stipend Per Month:</label>
+                    <input type="text" id="stipend_per_month" name="stipend_per_month">
+                </div>
+                <div>
+                    <label for="apply_by">Apply By:</label>
+                    <input type="text" id="apply_by" name="apply_by">
+                </div>
+            </div>
+            <div class="form-row">
+                <div>
+                    <label for="applicants">Applicants:</label>
+                    <input type="text" id="applicants" name="applicants">
+                </div>
+                <div>
+                    <label for="skills_required">Skills Required:</label>
+                    <textarea id="skills_required" name="skills_required"></textarea>
+                </div>
+            </div>
+            <div class="form-row">
+                <div>
+                    <label for="perks">Perks:</label>
+                    <textarea id="perks" name="perks"></textarea>
+                </div>
+                <div>
+                    <label for="number_of_openings">Number of Openings:</label>
+                    <input type="text" id="number_of_openings" name="number_of_openings">
+                </div>
+            </div>
+            <div class="form-row">
+                <div>
+                    <label for="category">Category:</label>
+                    <input type="text" id="category" name="category">
+                </div>
+                <div>
+                    <label for="projects_for_work">Projects for Work:</label>
+                    <textarea id="projects_for_work" name="projects_for_work"></textarea>
+                </div>
+            </div>
+            <label for="about_company">About Company:</label>
+            <textarea id="about_company" name="about_company"></textarea>
+            <div class="form-row">
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div>
+                    <label for="confirm_password">Re-enter Password:</label>
+                    <input type="password" id="confirm_password" name="confirm_password" required>
+                </div>
+            </div>
+            <div>
+                <input type="submit" value="Register">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

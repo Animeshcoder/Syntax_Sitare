@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<style>
+        /* Reset default styles and define base styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #FF6B6B, #6B66FF);
+            color: #333;
+        }
+
+        /* Navbar styles */
+        #navbar {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            overflow: hidden;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        #navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+
+        #navbar a:hover {
+            background-color: #444;
+        }
+
+        /* Section styles */
+        .section {
+            margin: 50px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Service card styles */
+        .service-card {
+            margin: 20px auto;
+            width: 80%;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-card:hover {
+            transform: scale(1.05);
+        }
+
+        /* Text styles */
+        .section p {
+            font-size: 18px;
+            padding: 10px;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        /* Testimonial slider styles */
+        #testimonial-slider {
+            width: 50%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .slide {
+            display: none;
+            padding: 20px;
+            text-align: center;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .active {
+            display: block;
+        }
+
+        /* Footer styles */
+        #footer {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .social-icon {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .social-icon:hover {
+            color: #FFD700;
+        }
+
+
+  #services {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Grid layout with automatic sizing */
+    gap: 80px; /* Spacing between service cards */
+  }
+
+  .service-card {
+    background-color: #f9f9f9; /* Background color for service cards */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+  }
+
+  .service-card:hover {
+    transform: scale(1.05); /* Enlarge the card on hover */
+  }
+
+  .service-card h3 {
+    font-size: 24px;
+    color: #333; /* Text color for service card headings */
+  }
+
+  .service-card p {
+    font-size: 16px;
+    color: #555; /* Text color for service card descriptions */
+  }
+
+  .floating-text {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .floating-text {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .floating-text h1 {
+    /* animation: floatText 10s linear infinite; Adjust the animation duration as needed */
+    text-align: center;
+    font-size: 55px;
+  }
+
+  @keyframes floatText {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100%); /* Adjust the percentage to control the distance traveled */
+    }
+  }
+
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <a href="#">Home</a> |
+        <a href="#about">About</a> |
+        <a href="#services">Services</a> |
+        <a href="#testimonials">Testimonials</a> |
+        <a href="{{ url_for('profile') }}">Profile</a> |
+        <a href="{{ url_for('companies') }}">Companies</a> |
+        <a href="{{ url_for('contacts') }}">Contact Us</a>
+
+    </div>
+    <div class="section" id="welcome">
+        <div class="floating-text">
+          <h1>Connecting aspiring mind with dream internship</h1>
+        </div>
+    </div>
+      
+
+    
+    <h1 style="text-align: center;">Our Services</h1>
+    <div class="section" id="services">
+        
+
+        <div class="service-card">
+            <h3>Skill-Based Profile Creation</h3>
+            <p> Users can create detailed profiles showcasing their skills, similar to professional networking sites like LinkedIn. This allows potential employers to gain a clear understanding of the user’s abilities.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Task Assignment</h3>
+            <p>The platform provides users with tasks, tests, and projects that are related to their skills. This allows users to apply their skills in a practical setting and gain valuable experience.</p>
+        </div>
+        <div class="service-card">
+            <h3>Performance Evaluation</h3>
+            <p>An intelligent algorithm checks the correctness of the tasks, detects cheating, and identifies plagiarism. This ensures that the work submitted by users is original and accurately reflects their abilities.</p>
+        </div>
+        <div class="service-card">
+            <h3>Recognition of Achievement</h3>
+            <p>Users are awarded badges and remarks based on their performance on the tasks. This provides a visual representation of the user’s skills and achievements.</p>
+        </div>
+        <div class="service-card">
+            <h3>Company-Student Matching</h3>
+            <p>The platform recommends companies to students based on their skills, and vice versa. This ensures that users are matched with companies that are interested in their specific skill set.</p>
+        </div>
+        <div class="service-card">
+            <h3>Suitability for Research-Based Internships</h3>
+            <p>The platform is particularly beneficial for students seeking research-based internships, where specific technical competencies and innovative thinking are highly valued.</p>
+        </div>
+
+    </div>
+
+    <div class="section" id="about">
+        <h2 style="color: #260202; font-size: 32px; text-align: center;">About Us</h2>
+        <p style="font-size: 18px; line-height: 1.6; text-align: justify; text-justify: inter-word; color: #555;">
+            Welcome to our platform, a unique space designed to bridge the gap between students and potential internship providers. We understand the challenges students face in securing internships that provide real-world experience and enhance employability. Our platform is designed to address these issues innovatively.
+    
+            We help students create detailed skill-based profiles, similar to professional networking sites like LinkedIn, but with a twist. Our platform provides students with tasks, tests, and projects related to their skills. An intelligent algorithm checks the correctness, detects cheating, and identifies plagiarism in these tasks.
+    
+            The performance of the students on these tasks is recognized through badges and remarks, providing companies with a more accurate representation of the student’s abilities. Furthermore, our platform recommends companies to students based on their skills and vice versa.
+    
+            Our solution is particularly beneficial for students seeking research-based internships, where specific technical competencies and innovative thinking are highly valued. We aim to provide a comprehensive approach to matching students with internships based on verified skills and performance on relevant tasks.
+    
+            Join us today and take a step towards a brighter future!
+        </p>
+    </div>
+    
+
+    <div class="section" id="testimonials">
+        <h2 style="text-align: center;">Testimonials</h2>
+
+        <div id="testimonial-slider">
+            <div class="slide active">
+                <p>"I was struggling to find an internship that matched my skills and interests. 
+                    This platform not only helped me create a detailed skill-based profile but also
+                    provided me with tasks and projects that were relevant to my field of study. 
+                    The badges I earned through completing these tasks caught the attention of several 
+                    companies, and I was able to secure an internship with a leading tech firm. 
+                    I highly recommend this platform to any student looking for internships." - User A</p>
+            </div>
+            <div class="slide">
+                <p>"As a student with a non-traditional background, I found it challenging to showcase my skills and competencies to potential employers. This platform changed that for me. The tasks and projects allowed me to demonstrate my abilities in a practical way, and the algorithm’s plagiarism check ensured that my work was evaluated fairly. Thanks to this platform, I landed an internship in a field I am passionate about." - User B</p>
+            </div>
+
+            <div class="slide">
+                <p>"We were impressed by the quality of candidates we found through this platform. The skill-based profiles gave us a clear understanding of each candidates abilities, and the badges they earned through completing tasks provided evidence of these skills. We were able to recruit several interns who have since become valuable members of our team." - Company A</p>
+            </div>
+            <div class="slide">
+                <p>"This platform has revolutionized our intern recruitment process. We can now match with potential interns based on their verified skills and task performance, which has significantly improved the efficiency of our recruitment process. We’ve found some truly talented individuals through this platform who have brought fresh ideas and perspectives to our company." - Company B</p>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <p>Email: contact@ourplatform.com | Phone: +919293949596</p>
+        <a class="social-icon" href="#"><i class="fab fa-facebook-f"></i></a>
+        <a class="social-icon" href="#"><i class="fab fa-twitter"></i></a>
+        <a class="social-icon" href="#"><i class="fab fa-instagram"></i></a>
+
+    </div>
+    <script>
+        var slideIndex = 0;
+        showSlides();
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("slide");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 5000);
+        }
+    </script>
+</body>
+</html>

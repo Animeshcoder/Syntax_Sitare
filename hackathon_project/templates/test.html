@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            max-width: 1200px; /* Increase container width */
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Increase box size */
+            grid-gap: 20px; /* Increase gap between boxes */
+        }
+        .category-card {
+            cursor: pointer;
+            background-color: #f5f5f5;
+            border-radius: 10px; /* Increase border radius */
+            padding: 20px; /* Increase padding */
+        }
+        .category-card:hover {
+            background-color: #e0e0e0;
+        }
+        .category-card h2 {
+            margin: 0;
+        }
+        .flash-card {
+            display: 1ne;
+        }
+        .flash-card.open {
+            display: block;
+        }
+        img {
+            max-width: 100%;
+        }
+
+        div {
+            position: relative;
+        }
+
+        label {
+            font-size: 20px;
+        }
+
+        input {
+            font-size: 20px;
+        }
+
+        input {
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body >
+    <header>
+        <h1>Test</h1>
+    </header>
+    <div class="container">
+        <div class="category-card" id="frontend-card">
+            <h2>Emotional Test</h2>
+            <div class="flash-card">
+                <div class="question">
+                    <label for="question1_1">1. Do you often feel sad or down?</label>
+                    <br>
+                    <input type="radio" name="my_radio" value="1"> 1
+                    <input type="radio" name="my_radio" value="2"> 2
+                    <input type="radio" name="my_radio" value="3"> 3
+                    <input type="radio" name="my_radio" value="2"> 4
+                    <input type="radio" name="my_radio" value="3"> 5
+                  </div>
+                  
+                  <div class="question">
+                    
+                    <label for="question2_1">2. Do you have trouble sleeping or oversleeping?</label>
+                    <br>
+                    <input type="radio" name="my_radio" value="1"> 1
+                    <input type="radio" name="my_radio" value="2"> 2
+                    <input type="radio" name="my_radio" value="3"> 3
+                    <input type="radio" name="my_radio" value="2"> 4
+                    <input type="radio" name="my_radio" value="3"> 5
+                    </div>
+                  
+                  
+                  
+                  <div class="question">
+                    
+                    <label for="question3">3. Do you lose interest in activities you used to enjoy?</label>
+                    <br>
+                    <input type="radio" name="my_radio" value="1"> 1
+                    <input type="radio" name="my_radio" value="2"> 2
+                    <input type="radio" name="my_radio" value="3"> 3
+                    <input type="radio" name="my_radio" value="2"> 4
+                    <input type="radio" name="my_radio" value="3"> 5
+                  </div>
+
+                  <div class="question">
+                    
+                    <label for="question5">4. Do you have difficulty concentrating?</label>
+                    <br>
+                    <input type="radio" name="my_radio" value="1"> 1
+                    <input type="radio" name="my_radio" value="2"> 2
+                    <input type="radio" name="my_radio" value="3"> 3
+                    <input type="radio" name="my_radio" value="2"> 4
+                    <input type="radio" name="my_radio" value="3"> 5
+                  </div>
+
+                  <div class="question">
+                    
+                    <label for="question3">5. Do you feel tired or have low energy?</label>
+                    <br>
+                    <input type="radio" name="my_radio" value="1"> 1
+                    <input type="radio" name="my_radio" value="2"> 2
+                    <input type="radio" name="my_radio" value="3"> 3
+                    <input type="radio" name="my_radio" value="2"> 4
+                    <input type="radio" name="my_radio" value="3"> 5
+                  </div>
+                  
+
+            </div>
+        </div>
+        <br>
+        <div class="category-card" id="backend-card">
+            <h2>Cognitive Skill Test</h2>
+            <div class="flash-card">
+                <label for="question1_1">1. Which of the following is the best definition of cognitive skills?</label>
+                    <br>
+                    <input type="radio" name="my_radio" value="1">  The ability to think, learn, and reason
+                    <br>
+                    <input type="radio" name="my_radio" value="2"> The ability to remember and recall information
+                    <br>
+                    <input type="radio" name="my_radio" value="3"> The ability to solve problems and make decisions
+                    <br>
+                    <input type="radio" name="my_radio" value="2"> All of the above
+                  </div>
+                  
+                  <div class="question">
+                    
+                    <label for="question2_1">2. Which of the following is an example of a cognitive skill?
+                    <br>
+                    <input type="radio" name="my_radio" value="1">Reading
+                    <br>
+                    <input type="radio" name="my_radio" value="2">Writing
+                    <br>
+                    <input type="radio" name="my_radio" value="3">Math
+                    <br>
+                    <input type="radio" name="my_radio" value="2"> All of the above
+                  </div>
+                  
+                  
+                  
+                  <div class="question">
+                    
+                    <label for="question3">3. Which of the following is a cognitive skill that is important for success in school?</label>
+                    <br>
+                    <input type="radio" name="my_radio" value="1">R Problem-solving
+                    <br>
+                    <input type="radio" name="my_radio" value="2">Critical thinking
+                    <br>
+                    <input type="radio" name="my_radio" value="3">Memory
+                    <br>
+                    <input type="radio" name="my_radio" value="2"> All of the above
+                  </div>
+                
+            </div>
+        </div>
+        <br>
+        <div class="category-card" id="ai-ml-card", style="text-align: center;">
+            <h2>Programming Skill Test</h2>
+            <div class="flash-card">
+               <label>1. What will be output of following code snippet?</label>
+               <br>
+               <img src="Screenshot 2023-11-05 050404.png">
+               <br>
+
+               <label>2. What is the difference between a function and a method?</label>
+                    <br>
+                    <input type="radio" name="my_radio" value="1">A function is a named block of code that can be reused throughout a program, while a method is a function that is associated with an object.
+                    <br>
+                    <input type="radio" name="my_radio" value="2">A function is a block of code that is executed when it is called, while a method is a function that is executed when an object is created
+                    <br>
+                    <input type="radio" name="my_radio" value="3">A function is a block of code that can be passed as an argument to another function, while a method cannot be passed as an argument to another function.
+                    <br>
+                    <input type="radio" name="my_radio" value="2"> All of the above
+                  
+            </div>
+        </div>
+    </div>
+    <script>
+        const categoryCards = document.querySelectorAll(".category-card");
+
+categoryCards.forEach(categoryCard => {
+  const flashCard = categoryCard.querySelector(".flash-card");
+
+  categoryCard.addEventListener("click", () => {
+    if (!flashCard.classList.contains("open")) {
+      flashCard.classList.add("open");
+    }
+  });
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        /* Style the form container */
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #f2f2f2;
+            border-radius: 10px;
+        }
+
+        /* Style the form */
+        .form-container form {
+            border: 2px solid #04AA6D; /* Green border */
+            padding: 28px;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        /* Full-width inputs */
+        .form-container input[type="text"],
+        .form-container input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid #ccc; /* Light border */
+            border-radius: 5px;
+        }
+
+        /* Style the buttons */
+        .form-container button {
+            background-color: #04AA6D; /* Green background */
+            color: white;
+            padding: 14px;
+            margin: 10px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* Add a hover effect for buttons */
+        .form-container button:hover {
+            opacity: 0.8;
+        }
+
+        /* The "Forgot password" text */
+        .psw {
+            float: right;
+            padding-top: 10px;
+        }
+
+        /* Change styles for span and cancel button on extra small screens */
+        @media screen and (max-width: 300px) {
+            .psw {
+                display: block;
+                float: none;
+            }
+        }
+
+        /* Add padding to containers */
+        .container {
+            padding: 14px;
+        }
+
+        /* Center the avatar image inside this container */
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+        }
+
+        /* Avatar image */
+        .imgcontainer img.avatar {
+            width: 40%;
+            border-radius: 50%;
+        }
+
+        /* Style the register buttons */
+        .register-btn {
+            background-color: #0077b5; /* LinkedIn blue */
+            color: white;
+            border: none;
+            padding: 10px 0;
+            margin: 10px 0;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* Add a hover effect for register buttons */
+        .register-btn:hover {
+            background-color: #005a8a; /* Darker LinkedIn blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form method="post">
+            <label for="user">Login Email:</label>
+            <input type="text" id="user" name="user">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <center><input type="submit" value="Login" style="background-color: #04AA6D; color: #fffafa;"></center>
+        </form>
+        <button class="register-btn" onclick="window.location.href='{{ url_for('register_intern') }}'">Register as Intern</button>
+        <button class="register-btn" onclick="window.location.href='{{ url_for('register_provider') }}'">Register as Provider</button>
+    </div>
+</body>
+</html>
