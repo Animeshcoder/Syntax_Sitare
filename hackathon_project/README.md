@@ -26,9 +26,11 @@ We wanted to solve this problem so firstly we asked our friends who are facing p
 1. Skill-based Profile Creation:-
 
   We create a student profile with detailed questions and answers with users. This feature is present in all other platforms.
+
 2. Task Assignment:-
 
   We provide tasks, projects, tests to help students more and help them to get internships easily as they are generally provided by the company or nearly similar questions. These things are not present in all platforms. Something is present but not up to level.
+
 3. Performance Evaluation:-
 
   Since students have done tasks, projects, tests we will evaluate their performance and suggest to them where they can improve themself and this report will be shared with the companies as mostly questions will be from the company or on the project they are working on.
